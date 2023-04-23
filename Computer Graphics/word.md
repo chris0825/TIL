@@ -120,3 +120,64 @@ DDA AL(Digital Differential Analyzer Algorithm)
 
 **4.2 원, 타원 및 기타 곡선**
 
+극좌표계: Polar Coordinate
+브레젠헴: Bresenham
+
+**4.3 다각형 채우기**
+
+홀짝 규칙: Even-Odd Rule
+접기횟수 규칙: Non-zero Winding Rule
+다각형 주사변환: Polygon Scan-Conversion
+활성화 엣지 목록(AEL): Active Edge List
+방향: dir
+응집성: Coherence
+
+**4.6 색상의 표현**
+
+색상보기표(CLUT): Color Look-Up Table
+
+# Chapter 5. 2차원 그래픽스의 변환
+
+**5.1 기본적인 기하변환 (Geometric Transformation)**
+
+ 이동: Translation
+  - 이동벡터: Translation Vector
+  - 더하기 연산: Addition
+ 신축 확대/축소: Scale
+  - 신축배율: Scaling Factor
+  - 곱하기 연산: Multiplication
+  - 원점: Origin
+회전: Roatation
+ - 회전각: Rotation Angle
+
+**5.2 동차좌표계를 이용한 변환**
+
+동차좌표계(HCS): Homogeneous Coordinate System
+ - 이동변환: Translate Transformation
+ - 신축변환: Scale Transformation
+ - 회전변환: Rotate Transformation
+ - 합성변환: Composite Transformation
+참조점: Reference Point
+
+**5.4 래스터 방식에서의 변환**
+
+래스터 연산: RasterOP
+ - 고무줄: Rubber Band
+비트블릿(bitBlt): Bit Block Transfer
+ - 펌웨어: Firmware
+ - 비트 연산: Bitwise Operation
+
+**5.5 윈도와 뷰포트**
+
+뷰잉 파이프라인: Viewing Pipeline
+줌잉: Zooming
+패닝: Panning
+
+**5.6 클리핑 알고리즘 (Clipping Algorithm)**
+
+점 클리핑: Point Clipping
+선 클리핑: Line Clipping
+ - Cohen-Sutherland Al: 영역비트 (Region Bit), 영역코드 (Region Code)
+다각형 클리핑: Polygon Clipping
+ - 속이 찬 다각형: Filled Polygon
+ - Sutherland-Hodgeman(Polygon Clipping Al)
