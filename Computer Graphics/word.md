@@ -9,16 +9,20 @@ GPU: Graphics Processing Unit
 국제표준: de-facto standard
 좌표계: Coordinate system
 도형: 3D(2D(점 point, 선 line, 다각형 polygon, 원 circle, 곡선 curve), 다면체 polyhedron, 곡면 surface)
+
 벡터 그래픽스: Vector Graphics
  - SVG: Scalable Vector Graphics
+
 래스터 그래픽스: Raster Graphics
  - 비트맵 그래픽스: Bitmap Graphics
  - 픽셀(Pixel): Picture Element
  - 페인팅: Painting
+
 모델링: Modeling
  - 와이어프레임: Wire-frame
  - 다각형 표면: Polygon Surface
  - 솔리드 모델링: Solid Modeling
+
 투영: Projection
 렌더링: Rendering
  - 관찰자: Viewer
@@ -27,6 +31,7 @@ GPU: Graphics Processing Unit
  - 셰이딩: Shading
  - 텍스처 매핑: Texture Mapping
  - 광선추적법: Ray Tracing
+
 이미지 처리: Image Processing
 가상공간: Cyberspace
 애니메이션: Animation
