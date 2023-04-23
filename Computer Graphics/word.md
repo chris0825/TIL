@@ -92,3 +92,31 @@ WebGL 기본 제공 형상 모델
  - Ground Shading
  - 퐁 셰이딩: Phong Shading
 블렌딩: Blending
+
+# Chapter 4. 2차원 그래픽스의 기본 요소
+
+속성: Attributes
+주사 변환: Scan Conversion
+
+점(Point)
+ - 크기: Size
+ - 명암: Intensity
+ - 색상: Color
+ - 모양: Shape
+
+선(Line)
+ - 선의 유형: Line Type
+ - 선의 굵기: Width
+ - 선끝 모양: Line Cap
+
+다중선(Polyline)
+ - 선 이음(Line Join): 없음(No Join), 연장이음(Miter Join), 원형이음(Round Join), 경사각이음(Bevel Join)
+
+DDA AL(Digital Differential Analyzer Algorithm)
+ - 기울기: Slope
+ - 절편: intercept
+
+8방향 대칭: Eight-way symmetry
+
+**4.2 원, 타원 및 기타 곡선**
+
