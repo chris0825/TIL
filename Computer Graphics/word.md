@@ -8,7 +8,7 @@ GPU: Graphics Processing Unit
 응용프로그래밍 인터페이스(API): Application Programming Interface
 국제표준: de-facto standard
 좌표계: Coordinate system
-도형: **3D(2D(** 점 point, 선 line, 다각형 polygon, 원 circle, 곡선 curve **)** , 다면체 polyhedron, 곡면 surface**)**
+도형: **3D(2D(** 점 point, 선 line, 다각형 polygon, 원 circle, 곡선 curve **)** , 다면체 polyhedron, 곡면 surface **)**
 
 벡터 그래픽스: Vector Graphics
  - SVG: Scalable Vector Graphics
