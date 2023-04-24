@@ -62,7 +62,7 @@ mv dic target_dic: target_dic안으로 dic이동. target_dic없으면 dic -> tar
  - cmp file1 file2: 두 파일의 차이 여부 판단(처음 달라지는 부분 정보 출력)
  - diff file1 file2: 두 파일이 차이나는 줄 출력
 > 메타 문자
- - *(asterisk): 0개 이상 차이나는 문자열에 일치
- - ?(question mark): 하나의 문자와 대응
- - [?-?](brackets): 괄호 안 문자 중 하나와 대응(?와 범위 동일)
+ - * (asterisk): 0개 이상 차이나는 문자열에 일치
+ - ? (question mark): 하나의 문자와 대응
+ - [?-?] (brackets): 괄호 안 문자 중 하나와 대응(?와 범위 동일)
  
