@@ -33,4 +33,36 @@ mv dic target_dic: target_dic안으로 dic이동. target_dic없으면 dic -> tar
  - tail: 파일의 마지막부분 내용 출력 (-n 옵션으로 원하는 라인 수 설정 가능)
  - file: 파일의 유형(txt, image, exe 등)확인
 > 파일/디렉토리 복사
- - cp file2 file2: file1을 file2에 복사
+ - cp file2 file2: file1을 file2에 복사(파일이 없으면 복사본 생성. 덮어쓰기 가능)
+  - cp -i file1 file2: file1을 file2에 복사(만약 덮어쓰기 되면 할거냐고 확인 문자뜸)
+  - cp [-i] files directory: files를 directory로 이동
+  - cp -r dic1 dic2: dic1내용 전부 dic2로 복사
+> 파일/디렉토리 삭제
+ - rm files: 파일 삭제
+ - rm -i files: 파일 삭제 여부 확인 후 삭제
+ - rm -f files: 파일 강제 삭제(쓰기 권한 없어도 삭제됨)
+ - rm -r dic: dic내에 파일 있어도 삭제
+ - rm -rf dic: dic모드에 w권한 없어도 강제 삭제
+> 파일 사용 권한
+
+ :파일 사용 권한 주는 이유 = 다른 사용자의 액세스 제한, 자원 공유, 자신의 실수로부터 보호
+ - 읽기(r), 쓰기(w), 실행(x)
+ - 순서는 사용자(owner)+그룹(group)+모든유저(others)
+ - Permission No.
+  - 0 = ---
+  - 1 = --x
+  - 2 = -w-
+  - 3 = -wx
+  - 4 = r--
+  - 5 = r-x
+  - 6 = rw-
+  - 7 = rwx
+ - chmod mode_No file: file의 mode를 mode_No로 변경 (root유저는 전체, 일반 사용자는 본인 파일만 모드 변경 가능)
+> 파일 비교
+ - cmp file1 file2: 두 파일의 차이 여부 판단(처음 달라지는 부분 정보 출력)
+ - diff file1 file2: 두 파일이 차이나는 줄 출력
+> 메타 문자
+ - *(asterisk): 0개 이상 차이나는 문자열에 일치
+ - ?(question mark): 하나의 문자와 대응
+ - [?-?](brackets): 괄호 안 문자 중 하나와 대응(?와 범위 동일)
+ 
