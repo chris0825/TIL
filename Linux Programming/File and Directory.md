@@ -58,6 +58,7 @@ mv dic target_dic: target_dic안으로 dic이동. target_dic없으면 dic -> tar
   - 6 = rw-
   - 7 = rwx
  - chmod mode_No file: file의 mode를 mode_No로 변경 (root유저는 전체, 일반 사용자는 본인 파일만 모드 변경 가능)
+ - mode쓸 때, 10진수, 8진수 가능. ugo+x식으로도 사용 가능. but,  u+x g+x o+x 으로는 사용 불가.
 > 파일 비교
  - cmp file1 file2: 두 파일의 차이 여부 판단(처음 달라지는 부분 정보 출력)
  - diff file1 file2: 두 파일이 차이나는 줄 출력
