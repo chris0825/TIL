@@ -126,3 +126,25 @@
 - 볼록 다각형 = Convex Hull
 ### 8.5.2 베지어 곡면(Bezier Surface)
 ## Chapter 09.
+- 은면 = Unvisible Hidden
+- 보이는 면 = Visible Surface
+### 9.1 은면제거(Hidden Surface Removal)
+- 뒷면 제거 = Backface Culling
+- 현실감 = Realism
+- 은선제거 = Hidden Line Removal
+- 객체공간법 = Object Space Method
+- 깊이정렬 알고리즘 = Depth Sorting = Painter's Algorithm
+- 이미지공간법 = Image Space Method
+- z-버퍼 알고리즘 = z-Buffer = Depth Buffer Algorithm
+### 9.1.2 은면제거의 처리 개념
+- 정렬 = Sorting
+- 일관성 = Coherence
+- 공간적 일관성 = Spatial Coherence
+- 시간적 일관성 = Temporal Coherence
+- 포함영역 = Extent
+### 9.3.2 다면체 뒷면의 제거(Back-Face Removal)
+- 색상값 = Intensity
+## 9.5 레이케스팅(Ray-Casting) 기법
+- 광선 = Ray
+- 만나는 점 = Hit Point
+- 광선추적법 = Ray Tracing
