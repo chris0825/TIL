@@ -78,15 +78,28 @@
   - 세그먼트로 모아 담을 수 있는 최대 데이터 양
 ### TCP 세그먼트(TCP Segment)
   - TCP헤더 + 클라이언트 데이터
+
 ### > TCP 세그먼트 헤더를 구성하는 필드
-### 출발지와 목적지 포트 번호(Source and Destination Port Number)
-  - 상위 계층 애플리케이션으로부터 다중화와 역다중화를 하는 데 사용
-### 체크섬 필드(Checksum Field)
-### 순서 번호 필드(Sequence Number Field)
-### 확인응답 번호 필드(ACknowledgement Nubmer Field)
-### 수신 윈도(Receive Window)
-### 헤더 길이 필드(Header Length Field)
-### 옵션 필드(Option Field)
-### 플래그 필드(Flag Field)
-### 긴급 데이터 포인터 필드(Urgent Data Pointer Field)
+**- 출발지와 목적지 포트 번호(Source and Destination Port Number)**
+> 상위 계층 애플리케이션으로부터 다중화와 역다중화를 하는 데 사용
+
+**- 체크섬 필드(Checksum Field)**
+
+**- 순서 번호 필드(Sequence Number Field)**
+
+**- 확인응답 번호 필드(Acknowledgement Number Field)**
+
+**- 수신 윈도(Receive Window)**
+
+**- 헤더 길이 필드(Header Length Field)**
+
+**- 옵션 필드(Option Field)**
+
+**- 플래그 필드(Flag Field)**
+
+  - ACK 비트: 성공적으로 수신된 세그먼트에 대한 확인응답 포함
+  - RST, SYN, FIN 비트: 연결 설정/해제에 사용
+  - PSH 비트: 수신자가 데이터를 상위 계층에 즉시 전달해야함을 가리킴
+  - URG 비트: 이 세그먼트에서 송신 측 상위 계층 개체가 '긴급'으로 표시하는 데이터임을 지칭
+            : 긴급 데이터 포인터 필드(Urgent Data Pointer Field)에 의해 가리켜짐
 ### 
