@@ -42,3 +42,51 @@
   - ACK or NAK 수신 / 아무것도 수신받지 않음
   - 타이머 종료
 ### 얼터네이팅 비트 프로토콜(Alternating-bit Protocol)
+  - 패킷의 순서 번호가 0과 1이 번갈아 나타남
+### 이용률 (또는 효율, Utilization)
+### 유효 처리량(Effective Throughput)
+### 파이프라이닝(Pipelining)
+  - 확인 응답들(ACK/NAK)을 기다리기 전에 송신자가 N개의 패킷을 전송하도록 허용한다면 송신자의 이용률은 N배가 됨
+### N부터 반복(GBN, Go-Back-N)
+  - 확인 응답을 기다리지 않고 여러 패킷을 전송
+  ### 윈도 크기(Window size)
+    - 순서번호 공간에서 응답 없이 전송 받을 수 있는 크기
+  ### 슬라이딩 윈도 프로토콜(Sliding-Window Protocol)
+    - 순서번호 순으로 응답이 완료되면 응답이 된 만큼 순서번호 공간에서 오른쪽으로 밀림
+  ### 누적 확인응답(Cumulative Acknowledgment)
+    - N까지 순서 번호를 가진 모든 패킷이 정상 수신 되면 N까지에 대한 확인 응답 전송
+  ### 이벤트 기반 프로그래밍(Event-Based Programming)
+    - 다양한 이벤트에 대한 대응으로 취할 수 있는 동작 구현
+### 선택적 반복(SR, Selective Repeat)
+  - 수신자에서 오류가 발생한 패킷을 수신했따고 의심되는 패킷만을 송신자가 재전송
+  - 각각의 개별적인 재전송은 수신자가 올바르게 수신된 패킷에 대한 개별적인 확인 응답 요구
+
+# 3.5 TCP: 연결 지향형 트랜스포트
+### 연결지향형(Connection-Oriented)
+  - 애플리케이션 프로세스가 데이터를 다른 프로세스에게 보내기 전에, 두 프로세스가 서로 '핸드 셰이크'를 먼저 해야함
+### 전이중 서비스(Full-Duplex Service)
+  - 애플리케이션 계층 데이터는 A, B동시에 흐를 수 있음
+### 점대점(Point-to-Point)
+  - 단일 송신자와 단일 수신자
+### 클라이언트/서버 프로세스 (Client/Server Process)
+  - 클라이언트 프로세스 = 연결을 초기화하는 프로세스
+  - 서버 프로세스 = 다른 프로세스
+### 세 방향 핸드셰이크(Three-way Handshake)
+  - 두 호스트 사이에 3개의 세그먼트가 오감
+### 송신 버퍼(Send Buffer)
+### 최대 세그먼트 크기(MSS, Maximum Segment Size)
+  - 세그먼트로 모아 담을 수 있는 최대 데이터 양
+### TCP 세그먼트(TCP Segment)
+  - TCP헤더 + 클라이언트 데이터
+### > TCP 세그먼트 헤더를 구성하는 필드
+### 출발지와 목적지 포트 번호(Source and Destination Port Number)
+  - 상위 계층 애플리케이션으로부터 다중화와 역다중화를 하는 데 사용
+### 체크섬 필드(Checksum Field)
+### 순서 번호 필드(Sequence Number Field)
+### 확인응답 번호 필드(ACknowledgement Nubmer Field)
+### 수신 윈도(Receive Window)
+### 헤더 길이 필드(Header Length Field)
+### 옵션 필드(Option Field)
+### 플래그 필드(Flag Field)
+### 긴급 데이터 포인터 필드(Urgent Data Pointer Field)
+### 
