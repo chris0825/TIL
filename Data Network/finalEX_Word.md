@@ -107,4 +107,18 @@
     > 이 세그먼트에서 송신 측 상위 계층 개체가 '긴급'으로 표시하는 데이터임을 지칭
     > 긴급 데이터 포인터 필드(Urgent Data Pointer Field)에 의해 가리켜짐
   
-### 누적 확인응답
+### 누적 확인응답(Cumulative Acknowledgment)
+  - 
+### 피기백(Piggybacked)
+### 지수적 가중 이동 평균(EWMA, Exponential Weighted Moving Average)
+### 신뢰적 데이터 전송 서비스(Reliable Data Transfer Service)
+### 빠른 재전송(Fast Retransmit)
+### 선택적 확인응답(Selective Acknowledgment)
+### 흐름 제어 서비스(Flow-Control Service)
+### 혼잡 제어(Congestion Control)
+### 수신 윈도(Receive Window)
+### SYN 플러드 공격(SYN flood attack)
+### SYNACK 세그먼트(STNACK segment)
+### SYN 쿠키
+
+## 3.6 혼잡 제어의 원리
