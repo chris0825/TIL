@@ -108,16 +108,26 @@
     > 긴급 데이터 포인터 필드(Urgent Data Pointer Field)에 의해 가리켜짐
   
 ### 누적 확인응답(Cumulative Acknowledgment)
-  - 
+  - 첫번째 잃어버린 바이트까지의 바이트들까지만 확인응답
 ### 피기백(Piggybacked)
+  - 클라이언트가 수신하는 서버에게 데이터에 대한 확인응답을 제공할 때, 데이터 세그먼트 안에 확인응답을 포함해 간다.(업어간다 = 피기백된다)
 ### 지수적 가중 이동 평균(EWMA, Exponential Weighted Moving Average)
+  - 예전 샘플보다 최근 샘플에 높은 가중치를 부여함
+  - 최신 샘플들이 네트워크 상의 현재 혼잡을 더 잘 반영함
 ### 신뢰적 데이터 전송 서비스(Reliable Data Transfer Service)
+  - 프로세스가 자신의 수신 버퍼로부터 읽은 데이터 스트림이 손상되지 않았으며 손실이나 중복이 없다는 것과 순서가 유지된다는것을 보장한다.
 ### 빠른 재전송(Fast Retransmit)
+  - 세그먼트의 타이머가 만료되기 이전에 손실 세그먼트를 재전송 하는것을 의미
 ### 선택적 확인응답(Selective Acknowledgment)
+  - TCP수신자가 마지막으로 올바로 수신된 순서가 맞는 세그먼트에 대해 누적 확인응답을 하기 보다는 순서가 틀린 세그먼트에 대해 선택적으로 확인응답을 하게 함
 ### 흐름 제어 서비스(Flow-Control Service)
+  - 송신자가 수신자의 버퍼를 오버플로시키는 것을 방지하기 위함
 ### 혼잡 제어(Congestion Control)
+  - IP 네트워크에서 혼잡때문에 억제함
 ### 수신 윈도(Receive Window)
+  - 수신 측에서 가용한 버퍼 공간이 얼마나 되는지 송신자에게 알려줌
 ### SYN 플러드 공격(SYN flood attack)
+  - 
 ### SYNACK 세그먼트(STNACK segment)
 ### SYN 쿠키
 
