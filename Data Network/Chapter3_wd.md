@@ -191,7 +191,10 @@
   5. 조심스럼게 탐지하던 과정에서 전송 속도가 W_max를 넘었음에도 손실이 발생하지 않는다면 손실을 유발하던 링크의 정체수준이 크게 변경된 것으로 인지하고 다시 전송속도를 급격하게 증가시킴
 ### 명시적 혼잡 알림(ECN, Explicit Congestion Notification)
   - 인터넷 내에서 수행되는 네트워크 지원 혼잡 제어의 한 형태
-  - 
+  - ECN비트의 한 설정을 라우터 정체를 파악할 수 있는 비트로 사용되어 송신자에게 ACK을 보낼 때 Echo비트를 설정하여 라우터 혼잡 상태를 명시하여 TCP송신자가 빠른 재전송을 사용하여 혼잡윈도를 절반으로 줄여 혼잡 알림 표시가 있는 ACK에 반응한다
+### 명시적 혼잡 알림 에코(ECE, Explicit Congestino Notification Echo)
+### CWR(Congestion Window Reduced) 비트
+  - 혼잡 윈도를 줄이면 해당 비트를 1로 설정
 ### 데이터그램 혼잡 제어 프로토콜(DCCP, Datagram Congestion Control Protocol)
   - ECN을 활용하여 적은 오버헤드, 혼잡 제어되는 UDP와 같은 신뢰할 수 없는 서비스를 제공
 ### 데이터 센터 TCP(DCTCP, Data Center TCP)
