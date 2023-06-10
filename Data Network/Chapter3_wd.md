@@ -154,7 +154,7 @@
 ### ATM ABR(Available Bite Rate)
 
 ## 3.7 TCP 혼잡 제어
-### 혼잡 윈도(Congestion Window)
+### 혼잡 윈도(cwnd, Congestion Window)
 **송신자의 송신 속도는 대략 swnd/RTT바이트/초이다.**
 
 **cwnd의 값을 조절하여, 송신자는 링크에 데이터를 전송하는 속도를 조절할 수 있다**
