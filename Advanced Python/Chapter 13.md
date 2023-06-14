@@ -1,0 +1,15 @@
+- CSV
+  - ,를 기준으로 나누어진 값
+  - 어디서나 사용할 수 있도록 텍스트 데이터를 사용
+  - 제일 상단에는 텍스트 데이터 입력
+- CSV 파일 만들기
+  - 엑셀 > [파일]-[다른이름으로저장] > 파일형식(CSV쉼표로분리) > [저장] > 엑셀 종료 후 메모장에서 파일 열기
+- CSV 파일 다루기
+  - ![SmartSelect_20230615_071058_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/c61d5cf6-38f1-4279-905a-70c170858202)
+  - quoting속성
+    - 기본속성은 csv.QUITE_MINIMAL
+    - QUOTE_ALL: 모든 데이터 자료형에 상관없이 묶음. 문자열형 처리
+    - QUOTE_MINIMAL: 최소한의 데이터만 묶음.
+    - QUOTE_NONNUMERIC: 숫자 데이터가 아닌 경우에만 묶음. 묶이지 않은 데이터는 실수형 처리
+    - QUOTE_NONE: 데이터 묶지 않음
+이후 더 있음
