@@ -1,0 +1,54 @@
+- Process Identifiers
+  - 모든 프로세스는 양수의 PID식별자를 가짐
+  - System Process 0~10000
+  - pid_t getpid(void): return PID
+  - pid_t getppid(void): return parent PID
+  - uid_t getuid(void): return Real UID
+  - uid_t geteuid(void): return effective UID
+  - gid_t getgid(void): return Real GID
+  - gid_t getegid(void): return effective GID
+  - Error를 Return하지 않는다.
+- fork()
+  - ONLY way to create a process in kernel
+  - Child process is the new process create by fork()
+  - called once return twice
+  - Child gets a copy of parent's data space, heap, and stack
+  - Parent and child continue executing instructions following the fork() call
+  - Often, fork() is followed by exec()
+- Properties Inherited to the Child
+  - Real UID/GID, effective UID/GID
+  - current working directory
+  - file mode creation mask
+  - environment
+- Properties Not Inherited to the Child
+  - the return value from fork()
+  - the PID are different
+- Race Conditions
+  - 수행되는 순서에 따라 결괏값이 달라짐
+    - System Load와 Kernel's 스케줄링 알고리즘에 따라 결정
+  - fork()이후 부모가 먼저 동작할지 자식이 먼저 동작할지 예측 불가
+  - 부모는 자식이 죽을때까지 기다림
+    - wait(), waitpid(), wait3(), wait4()
+    - 부모가 먼저 죽으면 자식이 좀비가 될 수 있음
+    - ![SmartSelect_20230614_231852_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/1cb9bf7e-b139-4290-bbf9-2df8bf702a89)
+  - Signal 또는 IPC method를 이용해 Race Condition 피할 수 있음
+- Program Execution: exec()
+  - exec()를 호출하여 완전히 다른 프로그램으로 실행
+  - 옵션
+    - p: filename
+    - l: takes a list of arguments: argv를 list로 받아들임
+    - v: takes argv[] vector: argv를 구성해서 넘겨야함
+    - e: takes envp[] array
+- Properties inherited to the new program
+  - same ID(PID, PPID, Real UID, ...)
+  - controlling terminal
+  - current working directory
+  - file locks
+  - resource limitse
+- system()
+  - 주어진 cmdstring을 Shell상에서 수행
+  - system() is implemented by calling fork, exec, and waitpid.
+- Process times
+  - 실제 수행된 시간
+  - 사용자 코드에 의해 CPU를 점유한 시간
+  - 시스템 코드에 의해 CPU를 점유한 시간
