@@ -1,0 +1,108 @@
+- stat(): 파일 상태 확인
+  - st_atime: 마지막으로 파일의 데이터를 읽은 시간
+  - st_mtime: 마지막으로 파일의 데이터를 수정한 시간
+  - st_ctime: 파일의 이름/권한 같은 상태를 변경한 시각
+  - st_blksize: 가장 효율적인 I/O 블럭 크기
+  - st_blocks: 파일이 차지하고 있는 공간의 크기
+- 파일 타입
+  - 보통 파일: -ugo
+  - 디렉토리 파일: dugo
+  - 문자 특수 파일: cugo
+  - 블록 특수 파일: bugo
+  - FIFO(Named Pipe): pugo
+  - 소켓
+  - 심볼릭 링크: lugo
+- 파일 타입 검사
+  - S_ISREG(): 정규 파일
+  - S_ISDIR(): 디렉토리 파일
+  - S_ISCHR(): 문자 특수 파일
+  - S_ISBLK(): 블록 특수 파일
+  - S_ISFIFO(): pipe 또는 FIFO
+  - S_ISLNK(): 심볼릭 링크
+  - S_ISSOCK(): 소켓
+- 파일 허가권
+  - S_IRUSR S_IRGRP S_IROTH > user/group/other - read
+  - S_IWUSR S_IWGRP S_IWOTH > user/group/other - write
+  - S_IXUSR S_IXGRP S_IXOTH > user/group/other - execute
+- 관련 명령어
+  - chmod: stat구조체의 st_mode(ugo)값 변경
+  - chown(root만 사용 가능): stat 구조체의 st_uid값 변경
+  - chgrp(root만 사용 가능): stat 구조체의 st_gid값 변경
+- 허가권
+  - Read권한(r--) 있어야(open() 함수에서) O_RDONLY, O_RDWR사용하여 열기 가능
+  - Write권한(-w-) 있어야(open() 함수에서) O_WRONLY, O_RDWR, O_TRUNC를 사용하여 파일 열기 가능
+  - 디렉토리에 Write권한과 Execute권한(-wx) 있어야 해당 디렉토리 파일 생성 및 삭제 가능
+  - execute권한(--x) 있어야 파일 열기 가능
+  - 디렉토리에 read권한(r--)있어야 디렉토리 안에 있는 파일 목록 읽기 가능
+  - 디렉토리에 write권한(-w-)있어야 디렉토리에 파일 생성/삭제 가능
+  - 디렉토리에 execute권한(--x)있어야 해당 디렉토리 하위에 파일 열기 가능
+- Effective User ID
+  - Real User ID와 Real Group ID
+    - Shell상에서 작업 수행시 User ID 및 Group ID
+  - Effective User ID와 Effective Group ID
+    - 프로세스의 속성
+    - 프로그램이 수행될 때 User ID 및 Group ID
+- S_ISUID와 S_ISGID
+  - S_ISUID: set-user-ID
+    - 실행된 프로세스의 Effective User ID는 Real User ID가 아니고 실행 파일 소유자의 User ID
+  - S_ISGID: set-group-ID
+    - 실행된 프로세스의 Effective Group ID는 Real Group ID가 아니고 실행 파일 소유자의 Group ID
+  - S_ISUID, S_ISGID모두 동시 설정 가능
+- access()
+  - Real User ID와 Real Group ID로 파일 허가권 검사
+  - mode값
+    - R_OK: test for read permission
+    - W_OK: test for write permission
+    - X_OK: test for execute permission
+    - F_OK: test for existence of file
+- chmod(), fchmod()
+  - stat 구조체의 st_mode변경
+  - mode
+    - S_ISUID, S_ISGID, S_ISVTX
+    - S_IRUSR, S_IWUSR, S_IXUSR
+    - S_IRGRP, S_IWGRP, S_IXGRP
+    - S_IROTH, S_IWOTH, S_IXOTH
+- chown()
+  - stat 구조체의 st_uid, st_gid 변경
+  - lchown()은 심볼릭 링크 자체를 변경한다
+- truncate(), ftruncate()
+  - 파일의 크기를 주어진 length로 줄임
+  - f가 붙은 함수는 파일을 open으로 연 파일의 크기를 조절
+- unlink()
+  - 파일을 삭제하는 역할 수행(link count 감소)
+  - 파일이 삭제될 경우 inode와 data block이 삭제
+- 파일 관련 시간
+  - stat 구조체의 st_atime
+    - 파일이 마지막으로 read된 시간
+  - stat 구조체의 st_mtime
+    - 파일이 마지막으로 write된 시간
+  - stat 구조체의 st_ctime
+    - chmod(), chown()등이 마지막으로 호출 된 시간
+- utime()
+  - 파일의 최종 접근 시간과 최종 변경시간 조정
+  - NULL = 현재 시간
+- 디렉토리
+  - 디렉토리도 일종의 파일이므로 open, read, close함수 사용 가능
+  - 구조체 dirent의 배열 형태로 저장
+- 디렉토리 접근
+  - opendir(): 디렉토리 파일 열기
+  - readdir(): 디렉토리 파일 읽기
+    - 읽을 떄 마다 디렉토리 파일의 current file offset은 읽은 구조체 dirent의 크기 만큼 증가
+    - 디렉토리 항목 읽기 위해서는 해당 디렉토리에 대해 읽기 권한 있어야함
+  - rewinddir()
+    - 디렉토리 파일의 current file offset을 처음으로 옮긴다
+  - closedir()
+    - 디렉토리 파일을 닫는다
+  - mkdir()
+    - 새로운 디렉토리를 만듦('.'(현재 디렉토리 파일의 i-node), '..'(부모 디렉토리 파일의 i-node)파일 자동 생성)
+  - rmdir()
+    - 비어있는 디렉토리 삭제
+  - chdir(), fchdir()
+    - 현재 작업 디렉토리 변경
+    - shell의 dir가 변하는 것이 아닌 프로세스의 working directory가 변하는것.
+  - getcwd()
+    - 현재 작업 디렉토리의 경로명을 얻음
+  - sync(), fsync()
+    - 버퍼에 있는 내용을 디스크에 씀
+    - sync(): 시스템 데몬 프로세스에 의해 30초마다 호출
+    - fsync(): 지정된 파일에 대해서만 I/O 작업 수행
