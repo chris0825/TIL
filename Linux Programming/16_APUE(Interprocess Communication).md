@@ -1,0 +1,14 @@
+- IPC using regular files
+  - 관련 없는 프로그램이 공유 가능
+  - 고정된 사이즈
+  - 동기화 결여
+- IPC using pipes
+  - 프로세스간 데이터 통신
+  - 데이터 전송가능
+  - open()을 통해 자동 동기화
+- Pipe
+  - A | B: A의 출력 > B의 입력
+- Data transmitting
+  - 데이터는 파이프에서 write() 시스템 콜 함수로 쓰기 가능
+  - 데이터는 파이프에서 read() 시스템 콜 함수로 읽기 가능
+  - 가득차거나 비어있으면 자동으로 막힘
