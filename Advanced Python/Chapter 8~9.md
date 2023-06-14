@@ -19,4 +19,25 @@
   - ![image](https://github.com/chris0825/TIL/assets/62418972/18a49c59-d3fc-4dad-ab6c-75f5568295b0)
   - ![image](https://github.com/chris0825/TIL/assets/62418972/459b88c3-240d-44cd-9684-f81d8c7e4639)
 - lambda
-  - 
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/dd4e2a9b-120e-4805-8db6-d09b91c4a4b2)
+  - 매개변수 갯수가 안맞으면 TypeError뜸
+- map()
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/079ddb91-dfd0-45e7-804a-f977e092347c)
+  - 2.x에서 3.x으로 넘어오면서 반드시 list를 붙여야 리스트형으로 반환된다(제너레이터 개념이 강화되면서 시퀀스 자료형의 데이터를 처리할 때 실행 시점의 값을 생성하여 효율적으로 메모리 관리 가능)
+  - list안붙일거면 다음과 같이 출력하면 된다
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/1a7df003-9767-4b9e-a529-9184f9937c5e)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/940e1041-7110-479d-9980-2f6a39680dc1)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/f511a35a-a9b0-46e4-932b-207e98bcf622)
+- reduce()
+  - ![SmartSelect_20230615_052557_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/36f3f116-4d0c-446a-a8f0-f2637197195f)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/2426fe9e-f5b4-4f18-8a58-cc01fdc535a5)
+- 별표(asterisk)
+  - 가변인수 - tuple
+  - ![SmartSelect_20230615_052952_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/32e1799f-20c2-403f-8dfe-b2d9b8639938)
+  - ![SmartSelect_20230615_053253_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/9d36f65a-02d5-4699-920d-242d22905e94)
+  - 키워드 가변인수 - dictionary
+  - ![SmartSelect_20230615_053008_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/68da2aa1-e80b-4132-995f-b151ccef87f7)
+  - 언패킹 *(리스트형), **(딕셔너리형)
+  - ![SmartSelect_20230615_053102_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/22418dd2-a134-47a1-934a-69e1f731e895)
+  - ![SmartSelect_20230615_053253_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/9d36f65a-02d5-4699-920d-242d22905e94)
+  - ![SmartSelect_20230615_053453_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/605d7500-9f78-4c64-b36a-9f011cc59c98)
