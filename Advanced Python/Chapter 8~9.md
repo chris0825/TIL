@@ -1,0 +1,22 @@
+- 파이썬 스타일 코드
+  - 개념: 인간의 시간이 컴퓨터의 시간보다 더 중요하다
+  - 사람이 해야 하는 일을 최대한 줄이면서 같은 목표를 달성할 수 있는 문법
+  - 코드 자체도 간결해지고 코드 작성 시간도 줄일 수 있다
+- split()
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/d38461f7-d1f0-4e15-a4ff-e9f38540d1b0)
+- join()
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/6a68be77-aa9d-44dc-a43a-32a7920fe5fc)
+- 리스트 컴프리헨션
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/e5796c99-9a2f-407a-bb98-c448a39d3df9)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/69cc9d4a-a55b-4478-8a64-602b0d55f346)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/93c43192-4564-4bc3-8ac0-9097c5d4e1f1)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/15e5fa15-0a2d-46f6-964a-20b0895182b7)
+- enumerate()
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/84e22cf1-282c-453d-a776-66d53ab9d717)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/a0490b36-5d8d-480e-99aa-bd7e163308c1)
+- zip(): return 값 tuple형임
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/bd803ed1-eff2-41a3-b8a4-4ca068ad65f3)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/18a49c59-d3fc-4dad-ab6c-75f5568295b0)
+  - ![image](https://github.com/chris0825/TIL/assets/62418972/459b88c3-240d-44cd-9684-f81d8c7e4639)
+- lambda
+  - 
