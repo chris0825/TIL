@@ -53,4 +53,8 @@
   - ![SmartSelect_20230615_065109_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/1ba30233-3aa5-416a-b11b-ddd81beb6b60)![SmartSelect_20230615_065136_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/697b8715-4217-456b-997e-f45528a43790)
 - pickle 모듈
   - 메모리에 로딩된 객체를 영속화할 수 있도록 지원
-  - 
+  - 쓰기
+  - ![SmartSelect_20230615_065554_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/479edd58-59c9-407d-baf4-208ac6cf6a49)
+  - 읽기
+  - ![SmartSelect_20230615_065603_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/2833c149-73ca-4c0b-bfd0-c131949411da)
+  - 뒤에 더 있는데 포기함
