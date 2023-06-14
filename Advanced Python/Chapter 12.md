@@ -1,0 +1,56 @@
+- 예외
+  - 프로그램을 개발하면서 예상하지 못한 상황이 발생한 것
+  - 예측 가능한 예외: 개발자가 사전에 인지할 수 있는 예외로 매우 쉽게 대응이 가능하다.
+  - 예측 불가능한 예외: 인터프리터가 자동으로 이것이 예외라고 사용자에게 알려주면서 프로그램이 종료되므로 적절한 조치가 필요하다.
+- try-except
+  - ![SmartSelect_20230615_060519_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/6705e99e-ff69-4406-82a0-88e6d901b5b9)
+  - ![SmartSelect_20230615_060741_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/349e0605-7a17-4400-81a7-24d3a039e937)![SmartSelect_20230615_060750_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/78a64064-31c6-407d-903b-dc7c94d4ee3f)
+  - 예외의 종류
+    - IndexError: 리스트 인덱스 범위를 벗어남
+    - NameError: 존재하지 않는 변수 호출
+    - ZeroDivisionError: 0으로 숫자를 나눔
+    - ValueError: 변환할 수 없는 문자나 숫자 변환
+    - FileNotFoundError: 존재하지 않는 파일 호출
+- try-except-else
+  - 해당 예외가 발생하지 않을 경우 else문 수행
+  - ![SmartSelect_20230615_060848_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/15343bce-51c7-4aeb-9f1d-ee3bb83357ed)
+- try-except-finally
+  - 예외 발생 여부와 상관 없이 코드가 정상적으로 종료되었을 경우 finally문 수행
+  - ![SmartSelect_20230615_063123_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/ec9e4141-908d-4f2c-b057-a39aa42a0c61)
+- raise
+  - 필요할 때 예외 발생
+  - ![SmartSelect_20230615_063344_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/a15ffe31-d628-4d9a-8934-92317b507120)
+- assert
+  - 코드를 작성할 때 잘못된 입력 여부를 사전에 확인하여 나중에 필요없는 연산을 막아줌
+  - ![SmartSelect_20230615_063514_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/30ad9062-a664-4126-8d76-bd90acd1869f)![SmartSelect_20230615_063653_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/21a3ef8f-f484-4c54-b65a-29d82dbc0420)![SmartSelect_20230615_063715_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/553d5171-81ac-4c47-8459-4f3c5741d869)
+  - isinstance(): 입력된 값이 뒤에 있는 클래스의 인스턴스인지 확인
+- 파일: 컴퓨터에서 정보를 저장하는 가장 작은 논리적인 단위
+  - 바이너리 파일
+    - 컴퓨터만 이해할 수 있는 형태인 이진법 형식으로 저장된 파일
+    - 일반적으로 메모장으로 열면 내용이 깨져 보임
+    - 엑셀, 워드
+  - 텍스트 파일
+    - 사람도 이해할 수 있는 형태인 문자열 형식으로 저장된 파일
+    - 메모장으로 열면 내용 확인 가능
+    - 메모장에 저장된 파일, HTML 파일, 파이썬 코드 파일 등
+- 디렉토리: 파일을 담는 또 하나의 파일, 직접 프로그램을 실행하지는 않지만 다른 파일들을 구분하고 논리적인 단위로 파일을 묶을 수 있음
+- 파일 읽기
+  - f = open("파일명", "파일 열기 모드")
+    - r(읽기모드), w(쓰기모드), a(추가모드)
+  - with open("파일명", "파일 열기 모드") as f:
+    - open()함수가 유지되고, 들여쓰기가 끝나면 open()함수도 끝남 = close()함수 필요 없음
+  - 파일변수.read(): 파일 전체의 텍스트를 문자열로 반환
+  - 파일변수.readlines(): 파일의 한 줄씩 리스트 요소로 저장(줄바꿈 문자 포함)
+    - 파일의 끝까지 읽으면 읽기 종료
+    - ![SmartSelect_20230615_064654_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/533fdc21-4bd5-4f0f-ac13-e350fb0c895d)
+- 파일 쓰기
+  - 디렉토리 생성
+  - import os
+  - os.mkdir("디렉토리 명")
+    - 생성하려는 디렉토리명과 같은 디렉토리가 이미 존재하면 FileExistsError발생하므로 다음과 같이 확인후 생성하는것이 좋음
+    - ![SmartSelect_20230615_064950_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/baf4e984-1512-4008-9625-ad342469c546)
+  - 로그 파일: 프로그램이 동작하는 동안 여러 가지 중간 기록을 하는 파일
+  - ![SmartSelect_20230615_065109_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/1ba30233-3aa5-416a-b11b-ddd81beb6b60)![SmartSelect_20230615_065136_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/697b8715-4217-456b-997e-f45528a43790)
+- pickle 모듈
+  - 메모리에 로딩된 객체를 영속화할 수 있도록 지원
+  - 
