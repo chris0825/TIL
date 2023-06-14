@@ -1,1 +1,91 @@
-
+- int main(int argc, char *argv[]);
+  - argc: the number of command-line arguments
+  - argv[]: an array of pointers to the arguments
+- C Start-Up Routine
+  - Started by the kernel (by the exec system call)
+  - Take the command-line arguments and the environment from the kernel
+- Normal Termination: 정상적 종료
+  - Return from main()
+  - Calling exit()
+  - Calling _exit()
+- Abnormal Termination: 비정상적 종료. core생성 후 종료
+  - CAlling abort()
+  - Terminated by a signal
+- exit()
+  - 프로세스 정상 종료
+  - Cleanup Processing 수행
+    - 모든 열려진 파일 등 닫음
+    - 출력 버퍼의 내용 디스크에 작성
+    - the exit status of a process (프로세스 리턴 값)
+    - Shell Programming에서 이용 가능
+- _exit()
+  - 프로세스 정상 종료
+  - Cleanup Processing 수행 안함
+- atexit()
+  - exit handler등록
+    - 프로그램이 종료될 때 수행하는 함수 등록
+  - func
+    - An exit handler
+    - A function pointer
+  - exit()는 exit handler들을 역순으로 호출
+    - ![SmartSelect_20230614_222333_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/e9777b14-39c6-4ea2-abee-53b22750b504)
+  - exec() can pass command-line arguments to a new program
+    - argc에 Argument개수를, argv에 Argument를 각각 전달
+- Environment Variables
+  - 환경 변수(environment variables)는 부모 프로세스에서 자식 프로세스로 전달
+  - 환경변수 선언 형식: 이름 = 값
+- Environment List
+  - 전역 변수 environ을 이용하여 환경 변수에 접근
+    - extern char ** environ;
+  - 각 항목은 "환경 변수 이름 = 값"의 형식을 가짐
+- getenv()
+  - 환경 변수 리스트에서 이름이 name인 것 찾아서 해당 값에 대한 포인터 리턴
+- putenv()
+  - str은 "name=value" 형식의 문자열
+  - 같은 이름의 환경 변수가 이미 있다면 새 값으로 변경
+- setenv()
+  - 환경 변수 "name = value"를 등록
+  - name의 환경 변수가 이미 있을 경우 rewrite != 0이면 새 값으로 변경, rewrite == 0이면 변경 안됨
+- unsetenve()
+  - 환경변수 name 제거
+- Memory Layout of a C Program
+  - Text Segment
+    - Machine instructions(read-only, sharable)
+  - Initialized Data Segment
+  - Uninitialized Data Segment
+  - Stack
+  - Heap
+- Shared Libraries
+  - Static Linking Library
+    - 사용된 라이브러리 루틴들이 실행파일에 추가
+    - 실행파일 크기 증가
+  - Shared Library
+    - 실행 파일에 라이브러리 루틴들 포함 안함
+    - 공용 메모리에 라이브러리 루틴을 로드하고 이를 공유
+    - 프로그램 크기 감소
+    - 처음 실행될 때 오버헤드 발생
+    - 라이브러리가 Version-Up돼도 실행파일 다시 컴파일 안함
+- Memory Allocation
+  - Dynamic allocation of memory from heap
+  - Provide suitable alignment
+- malloc()
+  - 주어진 바이트 수 할당
+  - 초기값 결정되지 않음
+- calloc()
+  - 주어진 크기의 객체를 주어진 개수만큼 할당
+  - 초기 값 0
+- realloc()
+  - 기 할당된 메모리 영역에 추가 할당
+  - 새 영역의 초기 값은 결정되지 않음
+- 가상 메모리(free 선언시 사용) 사용시 지속 할당 가능함
+- 할당 메모리 사용의 경우 시간이 지날수록 느려짐
+- Manipulating Memory
+  - 바이트 고정하기: void *memset(void *s, int c, size_t n)
+    - 주어진 위치(s)에서 시작하여 n바이트를 c로 고정함
+  - 바이트 비교하기: int memcmp(const void *s1, const void *s2, size_t n)
+    - 주어진 두 메모리 s1과 s2를 길이 n바이트까지 비교
+    - 같으면 0, s1이 크면 양수, s2가 크면 음수 리턴
+  - 바이트 복사하기: void *memcpy(void *dst, const void *src, size_t n)
+    - 주어진 src에서 dst로 n바이트 복사
+  - 바이트 검색하기: void *memchr(const void *s, int c, size_t n)
+    - 주어진 바이트c를 주어진 스트링s에서 검색하고 그 위치 리턴
