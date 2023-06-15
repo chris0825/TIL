@@ -1,21 +1,24 @@
-- Collectinos 모듈
-- Deque
-  - .append(): 우측 원소 추가
-  - .appendleft(): 좌측 원소 추가
+- collectinos 모듈
+- deque
+  - from collections import deque
+  - .append(i): 우측 원소 추가
+  - .appendleft(i): 좌측 원소 추가
   - .pop(): 우측 원소부터 삭제
   - stack과 원리 비슷하다 따라서 queue로 쓰려면 appendleft()로 추가해서 사용해야한다
   - 원형 연결리스트 특성 지원
-  - rotate(int n): 링크된 반대방향으로 n인덱스만큼 시작점 변경
+  - rotate(n): 링크된 반대방향으로 n인덱스만큼 시작점 변경
   - reversed()
   - extend(): 리스트 통째로 우측에 추가
   - extendleft(): 리스트 통째로 좌측에 추가
 - OrderdDict
+  - from collections import OrderedDict
   - 순서를 가진 딕셔너리 객체
   - key값 기준 정렬
   - ![SmartSelect_20230615_035149_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/715c6600-17c7-4e6f-ae4c-4cb824dda802)
   - ![SmartSelect_20230615_042211_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/dbdf0f20-37a9-4b28-8523-143e42d143cc)
   - value값 기준 정렬 하려면 t[1]바꾸면 됨
 - defaultdict
+  - from collections import defaultdict
   - 다른 dictionary의 경우 init되지 않은 키가 들어오면 KeyError발생
   - defaultdict의 경우 선언시 다음과 같이 선언
   - ![SmartSelect_20230615_035443_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/2b935cbb-e719-4ed1-a5fa-2d7406403902)
@@ -24,11 +27,12 @@
     - d = defaultdict(list)
     - key값 하나에 value값이 두개 이상이면 리스트 형으로 추가
 - Counter
+  - from collections import Counter
   - 리스트나 문자열에 요소가 총 몇개 들었는지 dictionary형태로 반환
   - 역으로 객체 생성도 가능
     - ![image](https://github.com/chris0825/TIL/assets/62418972/98400369-371a-4f5a-8fba-c828bbd3aaf6)
   - 사칙연산 및 논리연산 가능
     - ![SmartSelect_20230615_040625_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/2c8da892-575f-4d3f-af8b-6b3f7077212f)
 - namedtuple
+  - from collections import namedtuple
   - ![SmartSelect_20230615_042313_Samsung Notes](https://github.com/chris0825/TIL/assets/62418972/833e3526-6ff1-459e-967f-799faa952f85)
-
