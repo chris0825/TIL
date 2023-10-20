@@ -24,12 +24,18 @@
 ### 제어 에이전트(CA, Control Agent)
 
 ### 링크 상태(LS, Link-State)
-
+: 중앙 집중형, 완전한 전체 정보 가짐 -> 다익스트라 알고리즘 / 프림 알고리즘
 ### 거리 벡터(DV, Distance-Vector)
+: 분산형, 직접 연결된 링크 정보만 가짐, 반복적, 비동기적 -> 벨만-포드 알고리즘
+
+### 자율 시스템 (AS, Autonomous System)
 
 ### 개방형 최단 경로 우선 (OSPF, Open Shortest Path First)
+: 링크 상태 정보를 플러딩하고 다익스트라 최소 비용 경로 알고리즘을 사용하는 링크 상태 알고리즘
 
 ### MOSPF (Multicast OSPF)
+: 멀티캐스트 라우팅 기능을 제공하기 위해 OSPF를 단순 확장
+: 기존의 OSPF 링크 데이터베이스를 사용하고 OSPF 링크 상태 브로드캐스트 메커니즘에 새로운 형태의 링크상태 일림 추가
 
 ### CIDR (Classless Inter-Domain Routing)
 
@@ -67,7 +73,7 @@
 ### 오류 검출 및 정정 (EDC, Error Detection and Correction)
 
 ### 순방향 오류 정정 (FEC, Forward Error Correction)
-: 오류를 검출 및 정정하는 수신자의 능력력
+: 오류를 검출 및 정정하는 수신자의 능력
 
 ### 순환 중복 검사 코드 (CRC, Cyclic Redundancy Check = 다항식 코드, Polynomial Code)
 : 
