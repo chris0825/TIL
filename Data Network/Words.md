@@ -58,6 +58,17 @@
 
 # Chapter 6. 링크 계층과 근거리 네트워크
 
+### AP (Access Point)
+
+### 매체 접속 제어 (MAC, Midium Access Control)
+
+### 네트워크 인터페이스 컨트롤러 (NIC, Network Interface Controller)
+
+### 오류 검출 및 정정 (EDC, Error Detection and Correction)
+
+### 순방향 오류 정정 (FEC, Forward Error Correction)
+: 오류를 검출 및 정정하는 수신자의 능력력
+
 ### 순환 중복 검사 코드 (CRC, Cyclic Redundancy Check = 다항식 코드, Polynomial Code)
 : 
 
