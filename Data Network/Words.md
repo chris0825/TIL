@@ -44,6 +44,12 @@
 ### 외부 BGP(eBGP, external BGP)
 ### 내부 BFP(iBGP, interal BGP)
 
+### 네트워크 기능 가상화 (NFV, Network Functions Virtualization)
+: SDN의 일반화 = 단순한 상용 서버, 스위칭 및 저장소를 가지고 복잡한 미들박스를 혁신적으로 교체하는 것
+
+### 인터넷 제어 메시지 프로토콜 (ICMP, Internet Control Message Protocol)
+: 호스트와 라우터가 서로 간 네트워크 계층 정보를 주고받기 위해 사용
+
 ### 계약된 서비스 수준 계약 (SLA, Service Level Agreement)
 
 ### 네트워크 운영 센터 (NOC, Network Operations Center)
