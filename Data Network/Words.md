@@ -56,9 +56,12 @@
 
 ### 명령줄 인터페이스 (CLI, Command Line Interface)
 
+### SSH (Secure SHell)
+
 ### MIB (Management Information Base)
 
-### SMI (Structure of Management Information)
+### 정형의 정의 언어 (SMI, Structure of Management Information)
+: 네트워크 관리 데이터의 구문과 의미가 잘 정의되어 모호하지 않도록 보장하기 위해 사용
 
 ### PDU (Protocol Data Unit)
 
@@ -71,6 +74,8 @@
 
 
 # Chapter 6. 링크 계층과 근거리 네트워크
+
+### HFC (Hybrid Fiber-coaxial Cable)
 
 ### AP (Access Point)
 
