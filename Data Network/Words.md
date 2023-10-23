@@ -112,3 +112,9 @@
 ### DOCSIS (Data-Over-Cable Service Interface Specifications)
 
 ### ARP(Address Resolution Protocol)
+
+### 가상 근거리 네트워크 (VLAN, Virtual Local Area Network)
+: 하나의 물리적 근거리 네트워크 인프라스트럭처상에서 여러 개의 가상 근거리 네트워크들을 정의할 수 있음
+
+### 태그 프로토콜 식별자 (TPID, Tag Protocol Identifier)
+
