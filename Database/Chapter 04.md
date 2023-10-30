@@ -1,1 +1,13 @@
-![KakaoTalk_20231031_060722951](https://github.com/chris0825/TIL/assets/62418972/c218075c-ec3b-4337-81c3-2a4517a6721f)
+![image](https://github.com/chris0825/TIL/assets/62418972/cacdbef9-fd77-42e4-9ccd-8a5fcaa212e5)![KakaoTalk_20231031_060722951](https://github.com/chris0825/TIL/assets/62418972/c218075c-ec3b-4337-81c3-2a4517a6721f)
+# 관계 모델의 개념
+### 관계 모델 용어
+- 행 = 투플 = 레코드
+- 열 = 애트리뷰트
+- 테이블 = 릴레이션
+### 관계 모델의 구성
+- 관계 모델에서 데이터베이스는 릴레이션들의 모임(Collection)으로 표현
+- 릴레이션과 투플
+|릴레이션|투플|
+|:-:|:-:|
+|투플들의 집합으로 표현|애트리뷰트들로 구성|
+
