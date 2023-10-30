@@ -1,4 +1,5 @@
 ![image](https://github.com/chris0825/TIL/assets/62418972/cacdbef9-fd77-42e4-9ccd-8a5fcaa212e5)![KakaoTalk_20231031_060722951](https://github.com/chris0825/TIL/assets/62418972/c218075c-ec3b-4337-81c3-2a4517a6721f)
+![KakaoTalk_20231031_061506017](https://github.com/chris0825/TIL/assets/62418972/b457d385-76a8-4323-8303-718c28674d03)
 # 관계 모델의 개념
 ### 관계 모델 용어
 - 행 = 투플 = 레코드
