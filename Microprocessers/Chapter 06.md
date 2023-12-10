@@ -4,7 +4,7 @@
 3. 함수의 결과값 받아오는 방법 필요
 
 ### 함수 호출을 위한 명령어
-LINK
+LINK<br>
 BR nzp, addr
 
 ### 함수 복귀를 위한 명령어
@@ -25,10 +25,10 @@ RET
 
 ### 스택 동작 관련 TOY 프로세서 명령어
 - PUSH 동작
-SUB R5, R5, 1 (스택 포인터 -1)
+SUB R5, R5, 1 (스택 포인터 -1)<br>
 STR Rs, R5, 0 (스택 상단 Rs값 저장)
 - POP 동작
-LDR Rd, R5, 0 (스택 상단값 Rd에 저장)
+LDR Rd, R5, 0 (스택 상단값 Rd에 저장)<br>
 ADD R5, R5, 1 (스택 포인터 +1)
 
 ### 링크 레지스터의 저장과 복구
@@ -42,15 +42,15 @@ ADD R5, R5, 1 (스택 포인터 +1)
 
 ### 스택 프레임 조정
 - 함수 시작
-SUB R5, R5, 2 (LR, FP값을 새로운 값으로 변경해주기 위해 스택에 이전값 저장해 두려고 스택 영역 할당)
-STR R6, R5, 1 (LR값 스택에 PUSH)
-STR R4, R5, 0 (FP값 스택에 PUSH)
-COPY R4, R5 (SP값 FP에 복사)
+SUB R5, R5, 2 (LR, FP값을 새로운 값으로 변경해주기 위해 스택에 이전값 저장해 두려고 스택 영역 할당)<br>
+STR R6, R5, 1 (LR값 스택에 PUSH)<br>
+STR R4, R5, 0 (FP값 스택에 PUSH)<br>
+COPY R4, R5 (SP값 FP에 복사)<br>
 - 함수 종료
-COPY R5, R4 (SP값 복구)
-LDR R6, R5, 1 (LR값 복구)
-LDR R4, R5, 0 (FP값 복구)
-ADD R5, R5, 2 (LR, FP값 복구위해 할당했던 스택 영역 복구(POP))
+COPY R5, R4 (SP값 복구)<br>
+LDR R6, R5, 1 (LR값 복구)<br>
+LDR R4, R5, 0 (FP값 복구)<br>
+ADD R5, R5, 2 (LR, FP값 복구위해 할당했던 스택 영역 복구(POP))<br>
 RET
 
 ### 전역 변수 메모리 할당
