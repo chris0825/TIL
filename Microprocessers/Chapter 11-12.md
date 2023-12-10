@@ -3,9 +3,9 @@
 |TOY|ARM|x86|비고|
 |:-|:-|:-|:-|
 |ADD R0, R0, 7|-|addl $7, %eax|EAX <- EAX + 7|
-|SUB R0, R0, R1|-|subl %ebx, #eax|EAX <- EAX - EBX|
+|SUB R0, R0, R1|-|subl %ebx, %eax|EAX <- EAX - EBX|
 |CMP R0, 7|-|cmpl $7, %eax|EAX - 7|
-|AND R1, R1, R2|-|andl %ecx, #ebx|EBX <- EBX and ECX|
+|AND R1, R1, R2|-|andl %ecx, %ebx|EBX <- EBX and ECX|
 |OR R1, R1, 7|-|orl $7, %ebx|EBX <- EBX or 7|
 |COPY Rd, n|MOVS Rd, #n|movl $n, %Rd|EAX <- n|
 |NOT Rd,Rs|MVNS Rd, Rs|notl %eax|ARM: <br>x86: EAX <- not EAX|
