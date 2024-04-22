@@ -54,7 +54,7 @@
 
 ### DSL
 > 광대역 가정 접속 유형 중 하나로 기존 전화선(꼬임쌍선)이용
-![image](https://github.com/chris0825/TIL/assets/62418972/6fc7227c-53b3-4dd9-bc0f-f1de3c7413af)
+![image](https://github.com/chris0825/TIL/assets/62418972/580391eb-8b0b-420a-840e-be2a5954027d)
 ### 케이블 인터넷 접속
 > 케이블 TV(동축 케이블)의 인프라 스트럭처 이용
 ### HFC
