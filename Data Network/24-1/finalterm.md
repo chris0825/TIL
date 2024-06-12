@@ -6,7 +6,7 @@
 ### 확장된 FSM(extended FSM)
 > ?
 ### 누적 확인 응답(Cumulative acknowledgment)
-> [GBN 프로토콜](#GBN-(Go-Back-N,-N부터-반복)-프로토콜)에서 순서번호 n을 가진 패킷에 대한 확인 응답<br>
+> [GBN 프로토콜](#gbn-go-back-n-n부터-반복-프로토콜)에서 순서번호 n을 가진 패킷에 대한 확인 응답<br>
 > 모든 것에 확인 응답을 받는 것이 아니라 정상 수신한 마지막 패킷 번호만 회신
 ### 이벤트 기반 프로그래밍(Event-based Programming)
 > 다양한 이벤트에 대한 대응으로 취할 수 있는 동작을 구현
