@@ -56,7 +56,7 @@
 ### 피기백(Piggybacked)
 > 클라이언트/서버 데이터에 대한 확인 응답이 데이터 세그먼트 상에서 피기백 됨
 ### 지수적 가중 이동 평균(EWMA, Exponential Weighted Moving Average)
-> 최신 샘플이 네트워크상 현재 ㅎ노잡을 더 잘 반영하기 때문에 최근 샘플에 높은 가중치를 부여<br>
+> 최신 샘플이 네트워크상 현재 혼잡을 더 잘 반영하기 때문에 최근 샘플에 높은 가중치를 부여<br>
 > 가중치 갱신 절차가 진해오딤에 따라 빠르게 지수적으로 감소
 $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권장 a = 0.125}$$
 ### 신뢰적인 데이터 전송 서비스(Reliable data transfer service)
@@ -69,6 +69,8 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 > 누적 확인응답과 달리 '순서가 틀린' 세그먼트에 대해 선택적 확인응답
 ### 흐름제어 서비스(flow-control service)
 > 수신자가 수신받을 수 있는 만큼만 송신조절
+
+![흐름제어 관련 이미지](../resource/흐름제어.png)
 ### SYN 플러드 공격
 > 공격자는 세번째 핸드셰이크를 완료하지 않은 무수한 TCP SYN 세그먼트를 보내 수 많은 연결 자원이 공격자에게 할당<br>
 > = 합법적인 클라이언트의 서비스가 거부됨<br>
