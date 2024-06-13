@@ -28,13 +28,14 @@
     > TCP 연결 시 두 호스트 사이 3개의 세그먼트가 보내지므로 세 방향 핸드셰이크라고 불림
 - 송신 버퍼(send buffer)
     > TCP는 초기 세 방향 핸드셰이크 동안 준비된 버퍼 중 하나인 연결의 송신 버퍼로 데이터를 보냄
----
 ### 최대 세그먼트 크기(MSS, Maximum Segment Size)
 > 세그먼트로 모아 담을 수 있는 최대 데이터의 양
 ### 최대 전송 단위(MTU, Maximum Transmission Unit)
 > 로컬 송신 호스트에 의해 전송될 수 있는 가장 큰 링크계층 프레임의 길이
 ### TCP 세그먼트 (TCP Segment)
 > = TCP 헤더 + 클라이언트 데이터
+
+![TCP 세그먼트](../resource/TCP%20세그먼트%20구조.PNG)
 ### TCP 헤더
 - 출발지와 목먹지 포트번호(Source and Destination port number)
 - 체크섬 필드(Checksum field)
@@ -288,6 +289,7 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 > 인터넷 프로토콜 개발 기구
 ## IPv4와 IPv6
 ### IPv4 데이터그램의 주요 필드
+![IPv4 데이터그램](../resource/IPv4%20데이터그램.PNG)
 - 버전 번호(4bit)
   > 데이터그램의 IP 프로토콜 버전을 명시
 - 헤더 길이
@@ -315,6 +317,7 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 - 데이터(페이로드)(32bit)
   > 목적지에 전달하기 위해 트랜스포트 계층(layer 4) 세그먼트(TCP/UDP)를 포함하지만, ICMP 메세지 같은 유형의 데이터를 담기도 함
 ### IPv6 헤더필드
+![IPv6 데이터그램](../resource/IPv6%20데이터그램.PNG)
 - 버전(4bit)
   > IP 버전 번호 인식
 - 트래픽 클래스(8bit)
