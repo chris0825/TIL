@@ -77,6 +77,7 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 ### 연결당-처리량(per-connection throughtput)
 > 송신되는 데이터 양에 따른 수신되는 데이터의 양<br>
 > 링크 용량을 넘기 전까지는 송신량 = 수신량링크 용량이 넘어가면 송신량이 늘어도 수신량은 동일(최대치)
+![연결당 처리량/지연](../resource/연결당%20처리량과%20지연.PNG)
 ### 패킷 도착률이 링크 용량에 근접함에 따라 큐잉 지연이 커진다
 ### 송신율 = 바이트/초
 ### 제공된 부하(Offered load)
@@ -124,6 +125,9 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 ### TCP 혼잡제어 = AIMD
 ### 가법적 증가 승법적 감소(AIMD, additive-increase multiplicative-decrease)
 > TCP의 혼잡제어는 RTT마다 1MSS씩 cwnd의 선형(가법적) 증가, 3개의 중복 ACK 이벤트에서 cwnd를 반감(승법적 감소)
+### TCP 큐빅(TCP CUBIC)
+> TCP 리노의 개선 버전(혼잡 회피 동작 개선)
+![TCP 리노와 큐빅 혼잡 회피 전송 속도](../resource/TCP%20혼잡%20회피%20전송%20속도,%20리노와%20큐빅.PNG)
 ### 명시적 혼잡 알림(ECN, Explicit Congestion Notification)
 > 인터넷 내에서 수행되는 네트워크 지원 혼잡 제어의 한 형태<br>
 > 라우터가 혼잡(정체)을 겪고 있으면 IP 데이터그램 헤더의 ECN 비트를 설정
