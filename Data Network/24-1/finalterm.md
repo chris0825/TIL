@@ -57,7 +57,7 @@
 > 클라이언트/서버 데이터에 대한 확인 응답이 데이터 세그먼트 상에서 피기백 됨
 ### 지수적 가중 이동 평균(EWMA, Exponential Weighted Moving Average)
 > 최신 샘플이 네트워크상 현재 혼잡을 더 잘 반영하기 때문에 최근 샘플에 높은 가중치를 부여<br>
-> 가중치 갱신 절차가 진해오딤에 따라 빠르게 지수적으로 감소
+> 가중치 갱신 절차가 진행됨에 따라 빠르게 지수적으로 감소
 $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권장 a = 0.125}$$
 ### 신뢰적인 데이터 전송 서비스(Reliable data transfer service)
 > TCP는 IP의 비신뢰적인 최선형 서비스에게 신뢰적인 데이터 전송 서비스를 제공
@@ -74,7 +74,7 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 ### SYN 플러드 공격
 > 공격자는 세번째 핸드셰이크를 완료하지 않은 무수한 TCP SYN 세그먼트를 보내 수 많은 연결 자원이 공격자에게 할당<br>
 > = 합법적인 클라이언트의 서비스가 거부됨<br>
-:arrow_forward: SYN쿠키로 해결 가능
+:arrow_forward: [SYN쿠키](#syn-쿠키)로 해결 가능
 ### SYN 쿠키
 > 세그먼트가 정당한 사용자로부터 왔는지 확인되기 전까지 연결을 만들지 않고 해시 함수를 보내 이를 ACK 세그먼트로 회신하면 연결을 열고 보내지 못하면 연결을 열어주지 않음
 ### 연결당-처리량(per-connection throughtput)
