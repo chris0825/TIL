@@ -393,3 +393,18 @@ $$추정된RTT = (1 - \alpha) 추정된RTT + \alpha \times sampleRTT  \tag{권�
 ### 엔드 투 엔드 인수
 > 미들웨어 등장 전까지 대부분 인터넷 기능이 가장자리에 배치됐음<br>
 > 네트워크 내 패킷이 손실될 수 있으므로 엔드 포인트는 오류 제어를 수행해야 함([신뢰성 높은 데이터 전송](#신뢰적인-데이터-전송-서비스reliable-data-transfer-service)은 엔드 투 엔드로 구현됨)
+## Wrieshark 실습
+### 홈페이지 HTTP 패킷 분석
+> http&&ip.addr == xxx.xxx.xx.xxx
+- Frame 트레일러
+- Ethernet II 필드
+- IP 헤더
+- TCP 헤더
+- HTTP 헤더
+### ARP(Address Resolution Protocol)
+> 송신자는 프레임에 캡슐화하기 위해 수신자의 IP주소(논리 주소)를 통해 MAC 주소(물리 주소)를 요청함
+### DNS(Domain Name Service)
+- 질문 섹션(Question section)
+- 응답 섹션(Answer section)
+- 권한 섹션(Authoritative section)
+- 부가 섹션(Additional section)
