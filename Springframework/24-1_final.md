@@ -35,3 +35,17 @@
   <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
+
+### 프로젝트 구조
+- src/main/
+  - java
+    > java 파일 위치, 웹 애플리케이션에 사용되는 Controller, Service, Dao 객체가 있는 폴더
+  - webapp
+    > web과 관련된 파일들이 있는 폴더
+  - resource
+    > CSS, JS파일이 있는 폴더
+- web.xml
+  > 웹 서비스의 전반적인 설정
+- pom.xml
+  > 메인 리포지터리에서 프로젝트에 필요한 라이브러리를 내려 받기 위한 메이븐 설정 파일
+
