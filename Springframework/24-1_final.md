@@ -16,3 +16,22 @@
 <org.springframwork-version>5.2.9.RELEASE</org.springframework-version>
 ```
 
+### 한글 인코딩 (web.xml)
+```xml
+<filter>
+  <filter-name>encodingFilter</filter-name>
+  <filter-class>org.springframework.web.filter.characterEncodingFilter</filter-class>
+  <init-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </init-param>
+  <init-param>
+    <param-name>forceEncoding</param-name>
+    <param-value>true</param-value>
+  </init-param>
+</filter>
+<filter-mapping>
+  <filter-name>encodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+```
