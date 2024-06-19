@@ -49,3 +49,13 @@
 - pom.xml
   > 메인 리포지터리에서 프로젝트에 필요한 라이브러리를 내려 받기 위한 메이븐 설정 파일
 
+### 스프링 MVC 설정
+```xml
+<!-- pom.xml -->
+
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-webmvc</artifactId>
+  <version>${org.springframework-version}</version>
+</dependency>
+```
