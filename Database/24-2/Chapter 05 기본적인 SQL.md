@@ -1,9 +1,9 @@
 목차
 CREATE문
-SELECT문
+SELECT절
 DELETE문
 UPDATE문
-WHERE문
+WHERE절
 데이터타입
 
 # CREATE문
@@ -66,7 +66,7 @@ CREATE DOMAIN 도메인명 AS 데이터타입;
   ```sql
   애트리뷰트명 데이터타입 DEFAULT 디폴트값
   ```
-# SELECT문
+# SELECT절
 ## DISTINCT
 > 중복 값 제거
 
@@ -174,8 +174,30 @@ WHERE 삭제할투플조건
   ```sql
   ORDER BY 우선순위1 DESC, 우선순위2 ASC
   ```
+# GROUP BY절
+> 특정 애트리뷰트의 값이 같은 투플을 모아 그룹화<br>
+> 집계 함수를 적용하기 용이
 
 # HAVING절
+> GROUP BY에서 묶인 집합에 대한 조건문을 정의
+
+# CASE문
+> 투플의 검색(R), 삽입(C), 수정(U)시 조건에 따라 다른 질의가 가능
+```sql
+UPDATE 테이블
+SET 애트리뷰트 = 
+    CASE WHEN 조건 THEN 실행문
+                  ELSE 실행문
+    END;
+```
+
+# 질의 평가 순서
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
 
 # AS: 별명
 > 다른 테이블에 동일한 애트리뷰트 이름이 있을 수 있어 모호함을 방지하고자 사용(중첩질의)<br>
