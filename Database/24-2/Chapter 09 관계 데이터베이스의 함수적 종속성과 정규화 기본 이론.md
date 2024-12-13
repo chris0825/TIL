@@ -20,7 +20,7 @@
 - 2NF ~ BCNF까지 사용
 - 애트리뷰트들의 의미와 애트리뷰트 간 상호 관계로부터 유도되는 제약조건
 ![함수적 종속성](https://github.com/chris0825/TIL/blob/main/Database/resource/%ED%95%A8%EC%88%98%EC%A0%81%20%EC%A2%85%EC%86%8D%EC%84%B1.PNG?raw=true)
-### 부분 함수적 종속성
+### 부분 함수적 종속성(↔️ 완전 함수 종속성)
 > 결정자가 후보키 전체가 아닌 일부에 종속성이 성립하는 경우
 ```text
 A -> C
@@ -32,30 +32,43 @@ A -> C
 A -> C
 A -> B, B -> C
 ```
-### 완전 함수 종속성
-> 결정자가 후보키 전체인 경우
 
 # 정규화
 > 주어진 릴레이션 스키마를 함수적 종속성과 기본키를 기반으로 분석하여 분해함으로써 값의 중복과 세가지 갱신이상(삽입, 삭제, 수정)을 최소화<br>
 > 성능을 낮은 수준의 정규형을 선택하는 비정규화도 존재
+
 ![정규형](https://github.com/chris0825/TIL/blob/main/Database/resource/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%A0%95%EA%B7%9C%ED%99%94.PNG?raw=true)
 
 ## 제 1정규형(1NF)
 > 도메인이 오직 원자값이어야함
+
 ![1NF](https://github.com/chris0825/TIL/blob/main/Database/resource/1NF%20%EC%98%88%EC%A0%9C.PNG?raw=true)
 ### 1NF 갱신이상
+> 기본키에 대한 부분 함수적 종속성이 릴레이션에 존재
+- 수정이상: 중복 값 수정시 다른 투플과 일관성 문제 발생
+- 삽입이상: 필요없는 정보가 포함되지 않으면 삽입 불가
+- 삭제이상: 삭제되면 안되는 정보가 같이 삭제됨
+  
 ![1NF 갱신이상](https://github.com/chris0825/TIL/blob/main/Database/resource/1NF%20%EA%B0%B1%EC%8B%A0%EC%9D%B4%EC%83%81.PNG?raw=true)
 
 ## 제 2정규형(2NF)
+> 1NF + 완전 함수적 종속성 만족<br>
+> 모든 비주요 애트리뷰트가 기본키에 완적 함수적 종속
+
 ![2NF](https://github.com/chris0825/TIL/blob/main/Database/resource/2NF%20%EC%98%88%EC%A0%9C.PNG?raw=true)
 ### 2NF 갱신이상
 ![2NF 갱신이상](https://github.com/chris0825/TIL/blob/main/Database/resource/2NF%20%EA%B0%B1%EC%8B%A0%EC%9D%B4%EC%83%81.PNG?raw=true)
 
 ## 제 3정규형(3NF)
+> 2NF + [이행적 종속성](#이행적-함수-종속성) 제거<br>
+> 모든 비주요 애트리뷰트가 기본키에 직접 종속
+
 ![3NF](https://github.com/chris0825/TIL/blob/main/Database/resource/3NF%20%EC%98%88%EC%A0%9C.PNG?raw=true)
 ### 3NF 갱신이상
 ![3NF 갱신이상](https://github.com/chris0825/TIL/blob/main/Database/resource/3NF%20%EA%B0%B1%EC%8B%A0%EC%9D%B4%EC%83%81.PNG?raw=true)
 
 ## Boyce-codd정규형(BCNF)
+> 3NF + 결정자는 후보키만 가능
+
 ![BCNF](https://github.com/chris0825/TIL/blob/main/Database/resource/BCNF%20%EA%B0%9C%EB%85%90.PNG?raw=true)
 ![BCNF 예제](https://github.com/chris0825/TIL/blob/main/Database/resource/BCNF%20%EC%98%88%EC%A0%9C.PNG?raw=true)
